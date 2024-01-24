@@ -1,7 +1,9 @@
 // since the weights are mostly only used to make things repeat after x amount of rounds, they are overkill
 // would be less work to just wait x rounds and immeditely show what you missed, without updating any weights.
 "use strict";
-import {bind, isJapanese } from 'wanakana'
+//import {bind, isJapanese } from 'wanakana'
+let bind = wanakana.bind
+let isJapanese = wanakana.isJapanese
 import {optionRemoveFunctions, showFurigana, showEmojis, showStreak, showTranslation} from "./optionfunctions.js";
 import {wordData} from "./worddata.js";
 
