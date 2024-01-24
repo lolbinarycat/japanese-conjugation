@@ -50,9 +50,9 @@ function conjugationInqueryFormatting(conjugation) {
   let newString = "";
 
   if (conjugation.polite === true) {
-    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👔</div><div class="inquery-text">Polite</div></div>';
+    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👔</div><div class="inquery-text">Polite</div></div> ';
   } else if (conjugation.polite === false) {
-    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👪</div><div class="inquery-text">Plain</div></div>';
+    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👪</div><div class="inquery-text">Plain</div></div> ';
   }
 
   if (conjugation.affirmative === true) {
