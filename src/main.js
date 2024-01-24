@@ -47,10 +47,10 @@ function wordTypeToDisplayText(type) {
 function conjugationInqueryFormatting(conjugation) {
   let newString = "";
 
-  if (conjugation.tense == "Past") {
-    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">⌚</div><div class="inquery-text">Past</div></div> ';
-  } else if (conjugation.tense == "て-form" || conjugation.tense == "Adverb") {
-    newString += conjugation.tense;
+  if (conjugation.polite === true) {
+    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👔</div><div class="inquery-text">Polite</div></div>';
+  } else if (conjugation.polite === false) {
+    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👪</div><div class="inquery-text">Plain</div></div>';
   }
 
   if (conjugation.affirmative === true) {
@@ -59,10 +59,10 @@ function conjugationInqueryFormatting(conjugation) {
     newString += '<div class="conjugation-inquery"><div class="inquery-emoji">🚫</div><div class="inquery-text">Negative</div></div> ';
   }
 
-  if (conjugation.polite === true) {
-    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👔</div><div class="inquery-text">Polite</div></div>';
-  } else if (conjugation.polite === false) {
-    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">👪</div><div class="inquery-text">Plain</div></div>';
+  if (conjugation.tense == "Past") {
+    newString += '<div class="conjugation-inquery"><div class="inquery-emoji">⌚</div><div class="inquery-text">Past</div></div> ';
+  } else if (conjugation.tense == "て-form" || conjugation.tense == "Adverb") {
+    newString += conjugation.tense;
   }
 
   return newString;
